@@ -1,0 +1,285 @@
+/* ========================================
+   Tech/AI Style Customization
+   科技风/AI 风 自定义样式
+   ======================================== */
+
+/* 科技风配色方案 */
+:root {
+    --tech-bg-dark: #0a0e1a;
+    --tech-bg-medium: #111625;
+    --tech-primary: #00f0ff;      /* 青色霓虹 */
+    --tech-secondary: #7000ff;    /* 紫色霓虹 */
+    --tech-accent: #ff006e;       /* 粉红霓虹 */
+    --tech-text: #e0e6ed;
+    --tech-text-dim: #8892b0;
+    --tech-glow: 0 0 20px rgba(0, 240, 255, 0.5);
+    --tech-glow-strong: 0 0 40px rgba(0, 240, 255, 0.8);
+}
+
+/* 全局背景 */
+body {
+    background: linear-gradient(135deg, var(--tech-bg-dark) 0%, var(--tech-bg-medium) 100%);
+    color: var(--tech-text);
+}
+
+/* Intro 区域科技风 */
+#intro {
+    background: radial-gradient(circle at center, rgba(112, 0, 255, 0.15) 0%, transparent 70%);
+}
+
+#intro h1 {
+    color: var(--tech-primary);
+    text-shadow: var(--tech-glow);
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+#intro .slogan {
+    color: var(--tech-text);
+    font-size: 1.4rem;
+    text-shadow: 0 0 10px rgba(224, 230, 237, 0.5);
+    border-left: 3px solid var(--tech-accent);
+    padding-left: 20px;
+    margin-left: 10px;
+}
+
+/* 按钮科技风 */
+#intro .button {
+    background: linear-gradient(135deg, var(--tech-secondary) 0%, var(--tech-accent) 100%);
+    border: 2px solid transparent;
+    box-shadow: var(--tech-glow);
+    transition: all 0.3s ease;
+}
+
+#intro .button:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--tech-glow-strong);
+    background: linear-gradient(135deg, var(--tech-accent) 0%, var(--tech-secondary) 100%);
+}
+
+/* 导航栏科技风 */
+#title-bar {
+    background: rgba(10, 14, 26, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+}
+
+#title-bar h1 {
+    color: var(--tech-primary);
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+}
+
+#title-bar nav a {
+    color: var(--tech-text-dim);
+    transition: all 0.3s ease;
+}
+
+#title-bar nav a:hover {
+    color: var(--tech-primary);
+    text-shadow: 0 0 8px rgba(0, 240, 255, 0.6);
+}
+
+/* 文章卡片科技风 */
+.post-list .post {
+    background: rgba(17, 22, 37, 0.8);
+    border: 1px solid rgba(0, 240, 255, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.post-list .post:hover {
+    border-color: var(--tech-primary);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.post-list .post h2 {
+    color: var(--tech-text);
+}
+
+.post-list .post h2 a:hover {
+    color: var(--tech-primary);
+}
+
+.post-list .post .meta {
+    color: var(--tech-text-dim);
+}
+
+/* 标签和分类 */
+.tag-cloud a {
+    background: rgba(0, 240, 255, 0.1);
+    border: 1px solid rgba(0, 240, 255, 0.3);
+    color: var(--tech-primary);
+    transition: all 0.3s ease;
+}
+
+.tag-cloud a:hover {
+    background: var(--tech-primary);
+    color: var(--tech-bg-dark);
+    box-shadow: var(--tech-glow);
+}
+
+/* 代码块科技风 */
+pre, code {
+    background: rgba(10, 14, 26, 0.9);
+    border: 1px solid rgba(112, 0, 255, 0.3);
+    border-radius: 6px;
+}
+
+/* 链接样式 */
+a {
+    color: var(--tech-primary);
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--tech-accent);
+    text-shadow: 0 0 8px rgba(255, 0, 110, 0.6);
+}
+
+/* 分割线 */
+hr {
+    border: none;
+    border-top: 1px solid rgba(0, 240, 255, 0.3);
+    background: linear-gradient(90deg, transparent, var(--tech-primary), transparent);
+}
+
+/* 引用块 */
+blockquote {
+    border-left: 4px solid var(--tech-accent);
+    background: rgba(112, 0, 255, 0.1);
+    color: var(--tech-text-dim);
+}
+
+/* 表格 */
+table {
+    border: 1px solid rgba(0, 240, 255, 0.2);
+}
+
+table thead {
+    background: rgba(0, 240, 255, 0.1);
+}
+
+table tbody tr:nth-child(even) {
+    background: rgba(112, 0, 255, 0.05);
+}
+
+/* 页脚 */
+#copyright {
+    background: rgba(10, 14, 26, 0.9);
+    border-top: 1px solid rgba(0, 240, 255, 0.2);
+    color: var(--tech-text-dim);
+}
+
+#copyright a {
+    color: var(--tech-primary);
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--tech-bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--tech-secondary), var(--tech-accent));
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, var(--tech-primary), var(--tech-secondary));
+}
+
+/* 选中文字高亮 */
+::selection {
+    background: rgba(0, 240, 255, 0.3);
+    color: var(--tech-text);
+}
+
+::-moz-selection {
+    background: rgba(0, 240, 255, 0.3);
+    color: var(--tech-text);
+}
+
+/* 加载动画 */
+@keyframes tech-pulse {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(0, 240, 255, 0.8);
+    }
+}
+
+.loading {
+    animation: tech-pulse 2s infinite;
+}
+
+/* 霓虹文字效果 */
+.neon-text {
+    color: var(--tech-primary);
+    text-shadow: 
+        0 0 5px var(--tech-primary),
+        0 0 10px var(--tech-primary),
+        0 0 20px var(--tech-primary),
+        0 0 40px var(--tech-secondary);
+}
+
+/* 渐变文字 */
+.gradient-text {
+    background: linear-gradient(135deg, var(--tech-primary), var(--tech-secondary), var(--tech-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* 卡片悬停效果增强 */
+.card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(0, 240, 255, 0.1) 50%,
+        transparent 70%
+    );
+    transform: rotate(45deg);
+    transition: all 0.6s;
+}
+
+.card:hover::before {
+    animation: tech-shine 0.6s ease;
+}
+
+@keyframes tech-shine {
+    0% {
+        transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+    100% {
+        transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
+}
+
+/* 响应式适配 */
+@media screen and (max-width: 768px) {
+    #intro h1 {
+        font-size: 2rem;
+    }
+    
+    #intro .slogan {
+        font-size: 1rem;
+    }
+}
